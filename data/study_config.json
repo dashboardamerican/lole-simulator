@@ -1,0 +1,31 @@
+{
+  "planning_parameters": {
+    "cbot_pct": 1.5,
+    "default_peak_forecast_mw": 164186,
+    "target_lole_days_per_year": 0.1
+  },
+  "assumptions": {
+    "dr": {
+      "max_hours_per_day": 24,
+      "start_hour": 0,
+      "end_hour": 24,
+      "f_scaling_enabled": true,
+      "peak_50_50_mw": 164186
+    },
+    "storage": {
+      "eford": 0.05,
+      "charge_rate_frac": 1.0,
+      "default_roundtrip_efficiency": 0.9,
+      "default_slider_duration_hours": 4,
+      "fleet_breakdown_mw_by_duration": {
+        "10": 210.0,
+        "8": 315.0,
+        "6": 525.0,
+        "4": 4888.0
+      }
+    },
+    "load_model": {
+      "extra_daily_noise_std": 0.012
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "lole-wasm",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "lole_wasm_bg.wasm",
+    "lole_wasm.js",
+    "lole_wasm.d.ts"
+  ],
+  "main": "lole_wasm.js",
+  "types": "lole_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

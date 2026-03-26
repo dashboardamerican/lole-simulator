@@ -1,0 +1,788 @@
+{
+  "metadata": {
+    "generated": "2026-02-27T20:01:33.287Z",
+    "peak_forecast_mw": 164186,
+    "icap_mw": 197615,
+    "portfolio": {
+      "coal_mw": 35964,
+      "dr_mw": 8439,
+      "gas_cc_mw": 57560,
+      "gas_ct_mw": 24219,
+      "hydro_mw": 1992,
+      "nuclear_mw": 32181,
+      "oil_ct_mw": 2852,
+      "other_mw": 450,
+      "solar_mw": 13106,
+      "steam_mw": 9283,
+      "storage_mw": 5938,
+      "wind_mw": 3956,
+      "wte_steam_mw": 719
+    },
+    "target_lole": 0.1,
+    "clearing_price_mw_day": 329.17
+  },
+  "scenarios": {
+    "baseline": {
+      "label": "Baseline (current 20A)",
+      "policy": {
+        "winter_efficiency": false,
+        "weatherization_pct": 0
+      },
+      "solve": {
+        "accuracy_mode": "high",
+        "api_version": "2027.2-wasm",
+        "implied_irm_pct": 21.2716,
+        "solve_outputs": {
+          "eue_at_solved": 633.381,
+          "fpr_pct": 93.5853,
+          "irm_raw_pct": 22.7716,
+          "irm_solved_pct": 21.2716,
+          "lole_at_solved": 0.100174,
+          "lolh_at_solved": 0.237072
+        },
+        "solve_variable": "peak",
+        "solved_peak_mw": 160961.482,
+        "study_year": "2027-28",
+        "target_lole_days_per_year": 0.1,
+        "_elapsed_ms": 51764
+      },
+      "sim": {
+        "api_version": "2027.2-wasm",
+        "eue_mwh_per_year": 1884.553,
+        "icap_mw": 197615,
+        "irm_formula_pct": 18.8604,
+        "lole_days_per_year": 0.21402,
+        "lolh_hours_per_year": 0.588139,
+        "seasonal_split": {
+          "summer_pct": null,
+          "winter_pct": null
+        },
+        "stress_events": [],
+        "study_year": "2027-28",
+        "target_lole_gap": 0.11402,
+        "_elapsed_ms": 2326
+      }
+    },
+    "winter_efficiency_only": {
+      "label": "Winter Efficiency Only (E3 Rec #4)",
+      "policy": {
+        "winter_efficiency": true,
+        "weatherization_pct": 0
+      },
+      "solve": {
+        "accuracy_mode": "high",
+        "api_version": "2027.2-wasm",
+        "implied_irm_pct": 19.2221,
+        "solve_outputs": {
+          "eue_at_solved": 396.374,
+          "fpr_pct": 92.0037,
+          "irm_raw_pct": 20.7221,
+          "irm_solved_pct": 19.2221,
+          "lole_at_solved": 0.100844,
+          "lolh_at_solved": 0.210868
+        },
+        "solve_variable": "peak",
+        "solved_peak_mw": 163694.09,
+        "study_year": "2027-28",
+        "target_lole_days_per_year": 0.1,
+        "_elapsed_ms": 53369
+      },
+      "sim": {
+        "api_version": "2027.2-wasm",
+        "eue_mwh_per_year": 506.772,
+        "icap_mw": 197615,
+        "irm_formula_pct": 18.8604,
+        "lole_days_per_year": 0.112953,
+        "lolh_hours_per_year": 0.251861,
+        "seasonal_split": {
+          "summer_pct": null,
+          "winter_pct": null
+        },
+        "stress_events": [],
+        "study_year": "2027-28",
+        "target_lole_gap": 0.012953,
+        "_elapsed_ms": 2521
+      }
+    },
+    "full_winterization": {
+      "label": "Full Winterization (both levers)",
+      "policy": {
+        "winter_efficiency": true,
+        "weatherization_pct": 100
+      },
+      "solve": {
+        "accuracy_mode": "high",
+        "api_version": "2027.2-wasm",
+        "implied_irm_pct": 18.454,
+        "solve_outputs": {
+          "eue_at_solved": 494.329,
+          "fpr_pct": 91.4109,
+          "irm_raw_pct": 19.954,
+          "irm_solved_pct": 18.454,
+          "lole_at_solved": 0.099777,
+          "lolh_at_solved": 0.23861
+        },
+        "solve_variable": "peak",
+        "solved_peak_mw": 164742.379,
+        "study_year": "2027-28",
+        "target_lole_days_per_year": 0.1,
+        "_elapsed_ms": 53047
+      },
+      "sim": {
+        "api_version": "2027.2-wasm",
+        "eue_mwh_per_year": 370.776,
+        "icap_mw": 197615,
+        "irm_formula_pct": 18.8604,
+        "lole_days_per_year": 0.086427,
+        "lolh_hours_per_year": 0.193871,
+        "seasonal_split": {
+          "summer_pct": null,
+          "winter_pct": null
+        },
+        "stress_events": [],
+        "study_year": "2027-28",
+        "target_lole_gap": -0.013573,
+        "_elapsed_ms": 2634
+      }
+    }
+  },
+  "weatherization_sensitivity": [
+    {
+      "weatherization_pct": 0,
+      "winter_efficiency": true,
+      "solved_peak_mw": 163694.09,
+      "irm_pct": 19.2221,
+      "lole_at_solved": 0.100844,
+      "lolh_at_solved": 0.210868,
+      "eue_at_solved": 396.374,
+      "lole_at_baseline_peak": 0.112953,
+      "eue_at_baseline_peak": 506.772,
+      "delta_peak_vs_baseline": 2732.6080000000075,
+      "delta_irm_vs_baseline": -2.0494999999999983,
+      "elapsed_ms": 52629
+    },
+    {
+      "weatherization_pct": 10,
+      "winter_efficiency": true,
+      "solved_peak_mw": 164025.115,
+      "irm_pct": 18.9785,
+      "lole_at_solved": 0.099777,
+      "lolh_at_solved": 0.215856,
+      "eue_at_solved": 405.851,
+      "lole_at_baseline_peak": 0.104491,
+      "eue_at_baseline_peak": 441.128,
+      "delta_peak_vs_baseline": 3063.6330000000016,
+      "delta_irm_vs_baseline": -2.293099999999999,
+      "elapsed_ms": 52505
+    },
+    {
+      "weatherization_pct": 20,
+      "winter_efficiency": true,
+      "solved_peak_mw": 164237.667,
+      "irm_pct": 18.8226,
+      "lole_at_solved": 0.099677,
+      "lolh_at_solved": 0.219926,
+      "eue_at_solved": 413.307,
+      "lole_at_baseline_peak": 0.099082,
+      "eue_at_baseline_peak": 402.139,
+      "delta_peak_vs_baseline": 3276.1849999999977,
+      "delta_irm_vs_baseline": -2.448999999999998,
+      "elapsed_ms": 49220
+    },
+    {
+      "weatherization_pct": 30,
+      "winter_efficiency": true,
+      "solved_peak_mw": 164404.644,
+      "irm_pct": 18.7004,
+      "lole_at_solved": 0.099801,
+      "lolh_at_solved": 0.222407,
+      "eue_at_solved": 427.223,
+      "lole_at_baseline_peak": 0.093921,
+      "eue_at_baseline_peak": 380.481,
+      "delta_peak_vs_baseline": 3443.162000000011,
+      "delta_irm_vs_baseline": -2.571200000000001,
+      "elapsed_ms": 48796
+    },
+    {
+      "weatherization_pct": 40,
+      "winter_efficiency": true,
+      "solved_peak_mw": 164549.705,
+      "irm_pct": 18.5944,
+      "lole_at_solved": 0.100645,
+      "lolh_at_solved": 0.228313,
+      "eue_at_solved": 448.468,
+      "lole_at_baseline_peak": 0.08995,
+      "eue_at_baseline_peak": 370.333,
+      "delta_peak_vs_baseline": 3588.222999999998,
+      "delta_irm_vs_baseline": -2.677199999999999,
+      "elapsed_ms": 48721
+    },
+    {
+      "weatherization_pct": 50,
+      "winter_efficiency": true,
+      "solved_peak_mw": 164662.278,
+      "irm_pct": 18.5123,
+      "lole_at_solved": 0.099628,
+      "lolh_at_solved": 0.232754,
+      "eue_at_solved": 470.151,
+      "lole_at_baseline_peak": 0.088983,
+      "eue_at_baseline_peak": 366.714,
+      "delta_peak_vs_baseline": 3700.796000000002,
+      "delta_irm_vs_baseline": -2.7592999999999996,
+      "elapsed_ms": 48536
+    },
+    {
+      "weatherization_pct": 60,
+      "winter_efficiency": true,
+      "solved_peak_mw": 164709.091,
+      "irm_pct": 18.4782,
+      "lole_at_solved": 0.099653,
+      "lolh_at_solved": 0.23397,
+      "eue_at_solved": 480.108,
+      "lole_at_baseline_peak": 0.087692,
+      "eue_at_baseline_peak": 365.797,
+      "delta_peak_vs_baseline": 3747.6089999999967,
+      "delta_irm_vs_baseline": -2.7933999999999983,
+      "elapsed_ms": 48807
+    },
+    {
+      "weatherization_pct": 70,
+      "winter_efficiency": true,
+      "solved_peak_mw": 164700.748,
+      "irm_pct": 18.4843,
+      "lole_at_solved": 0.100099,
+      "lolh_at_solved": 0.234615,
+      "eue_at_solved": 478.572,
+      "lole_at_baseline_peak": 0.086179,
+      "eue_at_baseline_peak": 366.231,
+      "delta_peak_vs_baseline": 3739.2660000000033,
+      "delta_irm_vs_baseline": -2.7872999999999983,
+      "elapsed_ms": 50113
+    },
+    {
+      "weatherization_pct": 80,
+      "winter_efficiency": true,
+      "solved_peak_mw": 164734.757,
+      "irm_pct": 18.4595,
+      "lole_at_solved": 0.100372,
+      "lolh_at_solved": 0.236849,
+      "eue_at_solved": 488.115,
+      "lole_at_baseline_peak": 0.085955,
+      "eue_at_baseline_peak": 367.287,
+      "delta_peak_vs_baseline": 3773.2750000000233,
+      "delta_irm_vs_baseline": -2.812100000000001,
+      "elapsed_ms": 50561
+    },
+    {
+      "weatherization_pct": 90,
+      "winter_efficiency": true,
+      "solved_peak_mw": 164693.22,
+      "irm_pct": 18.4898,
+      "lole_at_solved": 0.100744,
+      "lolh_at_solved": 0.234814,
+      "eue_at_solved": 479.862,
+      "lole_at_baseline_peak": 0.08536,
+      "eue_at_baseline_peak": 368.841,
+      "delta_peak_vs_baseline": 3731.738000000012,
+      "delta_irm_vs_baseline": -2.7818000000000005,
+      "elapsed_ms": 54393
+    },
+    {
+      "weatherization_pct": 100,
+      "winter_efficiency": true,
+      "solved_peak_mw": 164742.379,
+      "irm_pct": 18.454,
+      "lole_at_solved": 0.099777,
+      "lolh_at_solved": 0.23861,
+      "eue_at_solved": 494.329,
+      "lole_at_baseline_peak": 0.086427,
+      "eue_at_baseline_peak": 370.776,
+      "delta_peak_vs_baseline": 3780.896999999997,
+      "delta_irm_vs_baseline": -2.8175999999999988,
+      "elapsed_ms": 51484
+    }
+  ],
+  "fo_only_sensitivity": [
+    {
+      "weatherization_pct": 0,
+      "winter_efficiency": false,
+      "solved_peak_mw": 160961.482,
+      "irm_pct": 21.2716,
+      "delta_peak_vs_baseline": 0
+    },
+    {
+      "weatherization_pct": 25,
+      "winter_efficiency": false,
+      "solved_peak_mw": 162401.276,
+      "irm_pct": 20.1832,
+      "delta_peak_vs_baseline": 1439.7940000000235
+    },
+    {
+      "weatherization_pct": 50,
+      "winter_efficiency": false,
+      "solved_peak_mw": 163412.635,
+      "irm_pct": 19.4301,
+      "delta_peak_vs_baseline": 2451.1530000000203
+    },
+    {
+      "weatherization_pct": 75,
+      "winter_efficiency": false,
+      "solved_peak_mw": 164020.246,
+      "irm_pct": 18.9821,
+      "delta_peak_vs_baseline": 3058.7640000000247
+    },
+    {
+      "weatherization_pct": 100,
+      "winter_efficiency": false,
+      "solved_peak_mw": 164364.824,
+      "irm_pct": 18.7295,
+      "delta_peak_vs_baseline": 3403.342000000004
+    }
+  ],
+  "elcc": {
+    "baseline": {
+      "solved_peak_mw": 160961.482,
+      "portfolio_eue_mwh": 633.38,
+      "perfect_eue_mwh": 611.43,
+      "perfect_delta_eue": 21.95,
+      "classes": {
+        "Nuclear": {
+          "eue_mwh": 611.97,
+          "elcc_pct": 97.54,
+          "delta_eue_mwh": 21.41
+        },
+        "Coal": {
+          "eue_mwh": 613.35,
+          "elcc_pct": 91.26,
+          "delta_eue_mwh": 20.03
+        },
+        "Gas CC": {
+          "eue_mwh": 614.24,
+          "elcc_pct": 87.23,
+          "delta_eue_mwh": 19.14
+        },
+        "Gas CT": {
+          "eue_mwh": 615.73,
+          "elcc_pct": 80.44,
+          "delta_eue_mwh": 17.66
+        },
+        "Steam": {
+          "eue_mwh": 615.52,
+          "elcc_pct": 81.37,
+          "delta_eue_mwh": 17.86
+        },
+        "Oil CT": {
+          "eue_mwh": 613.17,
+          "elcc_pct": 92.1,
+          "delta_eue_mwh": 20.21
+        },
+        "WTE Steam": {
+          "eue_mwh": 614.24,
+          "elcc_pct": 87.22,
+          "delta_eue_mwh": 19.14
+        },
+        "Wind": {
+          "eue_mwh": 625.19,
+          "elcc_pct": 37.3,
+          "delta_eue_mwh": 8.19
+        },
+        "Solar": {
+          "eue_mwh": 631.56,
+          "elcc_pct": 8.29,
+          "delta_eue_mwh": 1.82
+        },
+        "Storage": {
+          "eue_mwh": 618.18,
+          "elcc_pct": 69.26,
+          "delta_eue_mwh": 15.2
+        },
+        "DR": {
+          "eue_mwh": 614.14,
+          "elcc_pct": 87.68,
+          "delta_eue_mwh": 19.24
+        },
+        "Hydro": {
+          "eue_mwh": 611.27,
+          "elcc_pct": 100,
+          "delta_eue_mwh": 22.11
+        }
+      }
+    },
+    "winter_efficiency": {
+      "solved_peak_mw": 163694.09,
+      "portfolio_eue_mwh": 396.37,
+      "perfect_eue_mwh": 378.2,
+      "perfect_delta_eue": 18.18,
+      "classes": {
+        "Nuclear": {
+          "eue_mwh": 377.9,
+          "elcc_pct": 100,
+          "delta_eue_mwh": 18.47
+        },
+        "Coal": {
+          "eue_mwh": 378.81,
+          "elcc_pct": 96.65,
+          "delta_eue_mwh": 17.57
+        },
+        "Gas CC": {
+          "eue_mwh": 378.29,
+          "elcc_pct": 99.5,
+          "delta_eue_mwh": 18.08
+        },
+        "Gas CT": {
+          "eue_mwh": 378.49,
+          "elcc_pct": 98.42,
+          "delta_eue_mwh": 17.89
+        },
+        "Steam": {
+          "eue_mwh": 379.44,
+          "elcc_pct": 93.18,
+          "delta_eue_mwh": 16.94
+        },
+        "Oil CT": {
+          "eue_mwh": 378.27,
+          "elcc_pct": 99.6,
+          "delta_eue_mwh": 18.1
+        },
+        "WTE Steam": {
+          "eue_mwh": 379.13,
+          "elcc_pct": 94.88,
+          "delta_eue_mwh": 17.25
+        },
+        "Wind": {
+          "eue_mwh": 392.77,
+          "elcc_pct": 19.85,
+          "delta_eue_mwh": 3.61
+        },
+        "Solar": {
+          "eue_mwh": 390.9,
+          "elcc_pct": 30.1,
+          "delta_eue_mwh": 5.47
+        },
+        "Storage": {
+          "eue_mwh": 380.05,
+          "elcc_pct": 89.8,
+          "delta_eue_mwh": 16.32
+        },
+        "DR": {
+          "eue_mwh": 376.31,
+          "elcc_pct": 100,
+          "delta_eue_mwh": 20.07
+        },
+        "Hydro": {
+          "eue_mwh": 377.46,
+          "elcc_pct": 100,
+          "delta_eue_mwh": 18.92
+        }
+      }
+    },
+    "full_winterization": {
+      "solved_peak_mw": 164742.379,
+      "portfolio_eue_mwh": 494.33,
+      "perfect_eue_mwh": 472.18,
+      "perfect_delta_eue": 22.15,
+      "classes": {
+        "Nuclear": {
+          "eue_mwh": 471.48,
+          "elcc_pct": 100,
+          "delta_eue_mwh": 22.85
+        },
+        "Coal": {
+          "eue_mwh": 472.5,
+          "elcc_pct": 98.56,
+          "delta_eue_mwh": 21.83
+        },
+        "Gas CC": {
+          "eue_mwh": 471.7,
+          "elcc_pct": 100,
+          "delta_eue_mwh": 22.63
+        },
+        "Gas CT": {
+          "eue_mwh": 471.59,
+          "elcc_pct": 100,
+          "delta_eue_mwh": 22.74
+        },
+        "Steam": {
+          "eue_mwh": 472.78,
+          "elcc_pct": 97.29,
+          "delta_eue_mwh": 21.55
+        },
+        "Oil CT": {
+          "eue_mwh": 471.7,
+          "elcc_pct": 100,
+          "delta_eue_mwh": 22.63
+        },
+        "WTE Steam": {
+          "eue_mwh": 472.75,
+          "elcc_pct": 97.43,
+          "delta_eue_mwh": 21.58
+        },
+        "Wind": {
+          "eue_mwh": 491.42,
+          "elcc_pct": 13.15,
+          "delta_eue_mwh": 2.91
+        },
+        "Solar": {
+          "eue_mwh": 485.71,
+          "elcc_pct": 38.93,
+          "delta_eue_mwh": 8.62
+        },
+        "Storage": {
+          "eue_mwh": 475,
+          "elcc_pct": 87.28,
+          "delta_eue_mwh": 19.33
+        },
+        "DR": {
+          "eue_mwh": 468.63,
+          "elcc_pct": 100,
+          "delta_eue_mwh": 25.7
+        },
+        "Hydro": {
+          "eue_mwh": 471,
+          "elcc_pct": 100,
+          "delta_eue_mwh": 23.33
+        }
+      }
+    }
+  },
+  "market_impact": {
+    "baseline": {
+      "irm_pct": 21.2716,
+      "fpr": 0.9359,
+      "gas_ct_blended_elcc": 0.8044,
+      "forecast_peak_mw": 164186,
+      "reliability_requirement_mw": 153654,
+      "pool_ucap_mw": 161000,
+      "surplus_deficit_mw": 7346,
+      "ucap_by_class": {
+        "Nuclear": {
+          "icap_mw": 32181,
+          "elcc_pct": 97.54,
+          "ucap_mw": 31389
+        },
+        "Coal": {
+          "icap_mw": 35964,
+          "elcc_pct": 91.26,
+          "ucap_mw": 32821
+        },
+        "Gas CC": {
+          "icap_mw": 57560,
+          "elcc_pct": 87.23,
+          "ucap_mw": 50210
+        },
+        "Gas CT": {
+          "icap_mw": 24219,
+          "elcc_pct": 80.44,
+          "ucap_mw": 19482
+        },
+        "Steam": {
+          "icap_mw": 9283,
+          "elcc_pct": 81.37,
+          "ucap_mw": 7554
+        },
+        "Oil CT": {
+          "icap_mw": 2852,
+          "elcc_pct": 92.1,
+          "ucap_mw": 2627
+        },
+        "WTE Steam": {
+          "icap_mw": 719,
+          "elcc_pct": 87.22,
+          "ucap_mw": 627
+        },
+        "Wind": {
+          "icap_mw": 3956,
+          "elcc_pct": 37.3,
+          "ucap_mw": 1476
+        },
+        "Solar": {
+          "icap_mw": 13106,
+          "elcc_pct": 8.29,
+          "ucap_mw": 1086
+        },
+        "Storage": {
+          "icap_mw": 5938,
+          "elcc_pct": 69.26,
+          "ucap_mw": 4113
+        },
+        "DR": {
+          "icap_mw": 8439,
+          "elcc_pct": 87.68,
+          "ucap_mw": 7399
+        },
+        "Hydro": {
+          "icap_mw": 1992,
+          "elcc_pct": 100,
+          "ucap_mw": 1992
+        }
+      }
+    },
+    "winter_efficiency": {
+      "irm_pct": 19.2221,
+      "fpr": 0.92,
+      "gas_ct_blended_elcc": 0.9842,
+      "forecast_peak_mw": 164186,
+      "reliability_requirement_mw": 151057,
+      "pool_ucap_mw": 180940,
+      "surplus_deficit_mw": 29883,
+      "ucap_by_class": {
+        "Nuclear": {
+          "icap_mw": 32181,
+          "elcc_pct": 100,
+          "ucap_mw": 32181
+        },
+        "Coal": {
+          "icap_mw": 35964,
+          "elcc_pct": 96.65,
+          "ucap_mw": 34759
+        },
+        "Gas CC": {
+          "icap_mw": 57560,
+          "elcc_pct": 99.5,
+          "ucap_mw": 57272
+        },
+        "Gas CT": {
+          "icap_mw": 24219,
+          "elcc_pct": 98.42,
+          "ucap_mw": 23836
+        },
+        "Steam": {
+          "icap_mw": 9283,
+          "elcc_pct": 93.18,
+          "ucap_mw": 8650
+        },
+        "Oil CT": {
+          "icap_mw": 2852,
+          "elcc_pct": 99.6,
+          "ucap_mw": 2841
+        },
+        "WTE Steam": {
+          "icap_mw": 719,
+          "elcc_pct": 94.88,
+          "ucap_mw": 682
+        },
+        "Wind": {
+          "icap_mw": 3956,
+          "elcc_pct": 19.85,
+          "ucap_mw": 785
+        },
+        "Solar": {
+          "icap_mw": 13106,
+          "elcc_pct": 30.1,
+          "ucap_mw": 3945
+        },
+        "Storage": {
+          "icap_mw": 5938,
+          "elcc_pct": 89.8,
+          "ucap_mw": 5332
+        },
+        "DR": {
+          "icap_mw": 8439,
+          "elcc_pct": 100,
+          "ucap_mw": 8439
+        },
+        "Hydro": {
+          "icap_mw": 1992,
+          "elcc_pct": 100,
+          "ucap_mw": 1992
+        }
+      }
+    },
+    "full_winterization": {
+      "irm_pct": 18.454,
+      "fpr": 0.9141,
+      "gas_ct_blended_elcc": 1,
+      "forecast_peak_mw": 164186,
+      "reliability_requirement_mw": 150084,
+      "pool_ucap_mw": 183451,
+      "surplus_deficit_mw": 33367,
+      "ucap_by_class": {
+        "Nuclear": {
+          "icap_mw": 32181,
+          "elcc_pct": 100,
+          "ucap_mw": 32181
+        },
+        "Coal": {
+          "icap_mw": 35964,
+          "elcc_pct": 98.56,
+          "ucap_mw": 35446
+        },
+        "Gas CC": {
+          "icap_mw": 57560,
+          "elcc_pct": 100,
+          "ucap_mw": 57560
+        },
+        "Gas CT": {
+          "icap_mw": 24219,
+          "elcc_pct": 100,
+          "ucap_mw": 24219
+        },
+        "Steam": {
+          "icap_mw": 9283,
+          "elcc_pct": 97.29,
+          "ucap_mw": 9031
+        },
+        "Oil CT": {
+          "icap_mw": 2852,
+          "elcc_pct": 100,
+          "ucap_mw": 2852
+        },
+        "WTE Steam": {
+          "icap_mw": 719,
+          "elcc_pct": 97.43,
+          "ucap_mw": 701
+        },
+        "Wind": {
+          "icap_mw": 3956,
+          "elcc_pct": 13.15,
+          "ucap_mw": 520
+        },
+        "Solar": {
+          "icap_mw": 13106,
+          "elcc_pct": 38.93,
+          "ucap_mw": 5102
+        },
+        "Storage": {
+          "icap_mw": 5938,
+          "elcc_pct": 87.28,
+          "ucap_mw": 5183
+        },
+        "DR": {
+          "icap_mw": 8439,
+          "elcc_pct": 100,
+          "ucap_mw": 8439
+        },
+        "Hydro": {
+          "icap_mw": 1992,
+          "elcc_pct": 100,
+          "ucap_mw": 1992
+        }
+      }
+    },
+    "deltas": {
+      "demand_shift_mw": 3570,
+      "supply_shift_mw": 22451,
+      "total_gap_closure_mw": 26021,
+      "savings_at_cap_annual": 3166901418,
+      "savings_unrestricted_annual": 0,
+      "baseline_vrr_price_unrestricted": 0,
+      "winterized_vrr_price_unrestricted": 0,
+      "baseline_vrr_price_restricted": 179.55,
+      "winterized_vrr_price_restricted": 179.55
+    }
+  },
+  "summary": {
+    "baseline_irm_pct": 21.2716,
+    "full_winterization_irm_pct": 18.454,
+    "irm_reduction_pp": 2.8175999999999988,
+    "baseline_solved_peak_mw": 160961.482,
+    "full_solved_peak_mw": 164742.379,
+    "equivalent_baseload_mw": 3780.896999999997,
+    "annual_savings_at_329": 454263620.90384966,
+    "lole_baseline_at_peak": 0.21402,
+    "lole_full_at_peak": 0.086427,
+    "lole_improvement": 0.12759299999999998,
+    "efficiency_only_delta_mw": 2732.6080000000075,
+    "fo_decorrelation_delta_mw": 1048.2889999999898
+  }
+}
