@@ -1,0 +1,8 @@
+# Plaintext source (do not commit — use for re-encryption only)
+winterization.html.bak
+
+# Local-only secrets
+PASSWORDS.local.md
+PASSWORDS.local.txt
+*.local.md
+*.local.txt
